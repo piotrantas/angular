@@ -1,0 +1,108 @@
+* {
+	/*border: 1px solid;*/
+	box-sizing: border-box;
+}
+/*MAIN/Dafault view*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+.header {
+	background-color: #011369;
+	height:80px;
+	h1 {
+		margin-left: 20px;
+		color: #fff;
+		display: inline-block;
+	}
+}
+
+.appContainer {
+	margin-bottom: 80px;
+}
+
+footer {
+	@extend .header;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	p {
+		padding-top: 33px;
+		
+	}
+}
+/*USER VIEW*/
+
+.content {
+	border-left: 1px solid;
+}
+.userContent {
+	margin: 20px 0;
+	border-bottom: 1px solid;
+	padding: 20px 10px;
+	h4, a {
+		display: inline-block;
+		margin-left: 10px;
+		color: #000;
+	}
+
+}
+
+.pages {
+	text-align: center;
+}
+
+/*DETAILS/CHANGE VIEW*/
+
+.details {
+	@extend .content;
+	height: 500px;
+	margin: 10px auto;
+	padding: 15px 20px;
+	h2 {
+		margin: 0 auto 10px;
+	}
+
+}
+.photo, ,.form {
+	height: 250px;
+}
+
+.photo {
+	text-align: center;
+	label {
+		margin-top: 10px;
+	}
+}
+
+.description {
+	margin-top: 20px;
+}
+
+
+.submit {
+	margin-top: 30px;
+	button {
+		margin-left: 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

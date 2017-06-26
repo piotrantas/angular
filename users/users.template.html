@@ -1,0 +1,49 @@
+				<!-- USERS -->
+                <div id="content" class=" col-lg-9 content">
+                     <h2>Users</h2>
+
+            		<!-- SEARCH / ADD -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                           <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search for User">
+                              <span class="input-group-btn">
+                                 <button class="btn btn-default type="button">Go!</button>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="col-md-2 col-md-offset-4">
+                           <button class="btn btn-default" type="submit">Add User</button> 
+                        </div>
+                    </div>
+
+
+					
+
+            		<!-- LIST OF USERS -->
+                    <div id="userContent" class="userContent"  ng-repeat="item in vm.displayItems "> 
+                        <div class="row">
+                        	<div class="col-lg-2">
+                            	<img src="{{item.picture}}">
+                        	</div>
+                        	<div class="col-lg-6">
+                            	<h4>{{ item.name }}</h4>
+                            	<a href="mailto:{{item.email}}">{{item.email}}</a>
+                            	<p>{{item.details}}</p>
+                        	</div>
+                        	<div class="col-lg-2">
+                        		<button class="btn btn-default" ng-click="showUsers=false; showedit=true" type="">Edit</button>
+                        	</div>
+                        	<div class="col-lg-2">
+                        		<button class="btn btn-default" type="">Delete</button>
+                        	</div>
+                    	</div>
+                    </div>
+
+
+					     <!-- PAGINATION </-->
+
+                    <ul uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.currentPage" max-size="vm.maxSize"  boundary-links="true" force-ellipses="true" ng-change="vm.pageChanged()"></ul>
+
+	
+                </div>

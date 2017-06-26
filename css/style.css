@@ -1,0 +1,74 @@
+* {
+  /*border: 1px solid;*/
+  box-sizing: border-box; }
+
+/*MAIN/Dafault view*/
+html {
+  position: relative;
+  min-height: 100%; }
+
+.header, footer {
+  background-color: #011369;
+  height: 80px; }
+
+.header h1, footer h1 {
+  margin-left: 20px;
+  color: #fff;
+  display: inline-block; }
+
+.appContainer {
+  margin-bottom: 80px; }
+
+footer {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+footer p {
+  padding-top: 33px; }
+
+/*USER VIEW*/
+.content, .details {
+  border-left: 1px solid; }
+
+.userContent {
+  margin: 20px 0;
+  border-bottom: 1px solid;
+  padding: 20px 10px; }
+
+.userContent h4, .userContent a {
+  display: inline-block;
+  margin-left: 10px;
+  color: #000; }
+
+.pages {
+  text-align: center; }
+
+/*DETAILS/CHANGE VIEW*/
+.details {
+  height: 500px;
+  margin: 10px auto;
+  padding: 15px 20px; }
+
+.details h2 {
+  margin: 0 auto 10px; }
+
+.photo, .form {
+  height: 250px; }
+
+.photo {
+  text-align: center; }
+
+.photo label {
+  margin-top: 10px; }
+
+.description {
+  margin-top: 20px; }
+
+.submit {
+  margin-top: 30px; }
+
+.submit button {
+  margin-left: 20px; }

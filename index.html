@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+
+<html>
+   
+   <head>
+      <title>Angular JS Modules</title>
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="node_modules/angular/angular.js"></script>
+      <script src="node_modules/angular-route/angular-route.js"></script>
+
+      <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+      
+      <script src = "mainapp.js"></script>
+      
+
+      <script src = "users/users.component.js"></script>
+      <script src = "users/users.module.js"></script>
+      <script src = "edit/edit.component.js"></script>
+      <script src = "edit/edit.module.js"></script>
+      
+
+   </head>
+   
+   <body>
+   <!-- HEADER -->
+      <header id="header" class="header">
+         <h1>My APP</h1> 
+      </header>
+      
+  
+      <!-- MAIN CONTAINER -->
+         <div ng-app="mainApp" class="container appContainer">
+
+
+
+            
+            <div class="row">
+               <div class="col-lg-6 col-md-offset-4" ng-hide="showUsers">
+                  <a href="#" ng-click="showUsers=true">To see users details an documents please clik here<span class="sr-only">(current)</span></a>
+
+               </div>
+            </div>
+            <div class="row">
+               <!-- LEFT MENU -->
+               <div id="menu" class=" col-lg-3 menu">
+                  <h2>Menu</h2>
+                  <ul class="nav nav-pills nav-stacked">
+                     <li role="presentation" class="active"><a href="#">Users</a></li>
+                     <li role="presentation"><a href="#">Documents</a></li>
+                  </ul>
+               </div>
+               <!-- USERS LIST -->
+               <users ng-show="showUsers" ng-init="showUsers=false"></users>
+
+               <edit ng-show="showedit" ng-init="showedit=false"></edit> 
+
+            </div>
+         </div>
+      
+
+      <!-- FOOTER -->
+      <footer>
+         <p>powerd by myself</p>
+      </footer>
+
+
+   </body>
+</html>
