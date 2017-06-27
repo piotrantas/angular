@@ -11,7 +11,9 @@
 
 
 
-function usersCont($http, $anchorScroll){
+    function usersCont($http, $log, $anchorScroll){
+
+
     var vm = this;
                 
     $http({
@@ -30,7 +32,8 @@ function usersCont($http, $anchorScroll){
         vm.totalItems = list.length;
         vm.currentPage = 1;
         vm.maxSize = 5;
-        vm.itemsPerPage = 10;
+        vm.itemsPerPage = 5;
+        
 
         vm.displayItems = list.slice(0, 5);
 
@@ -39,11 +42,10 @@ function usersCont($http, $anchorScroll){
             vm.displayItems = list.slice(startPos, startPos + 5);
       
         };
-        $anchorScroll('#content');
+    
+   
 
-        function cos() {
-            console.log('dupa')
-        }
+      
 
     }
 

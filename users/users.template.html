@@ -1,6 +1,6 @@
 				<!-- USERS -->
                 <div id="content" class=" col-lg-9 content">
-                     <h2>Users</h2>
+                     <h2 id="head">Users</h2>
 
             		<!-- SEARCH / ADD -->
                     <div class="row">
@@ -8,7 +8,7 @@
                            <div class="input-group">
                               <input type="text" class="form-control" placeholder="Search for User">
                               <span class="input-group-btn">
-                                 <button class="btn btn-default type="button">Go!</button>
+                                 <button class="btn btn-default" ng-click="search"type="button" >Go!</button>
                               </span>
                            </div>
                         </div>
@@ -43,7 +43,6 @@
 
 					     <!-- PAGINATION </-->
 
-                    <ul uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.currentPage" max-size="vm.maxSize"  boundary-links="true" force-ellipses="true" ng-change="vm.pageChanged()"></ul>
-
+                    <ul uib-pagination class="pagination-sm" items-per-page="vm.itemsPerPage" total-items="vm.totalItems" ng-model="vm.currentPage" max-size="vm.maxSize"  boundary-links="true" force-ellipses="true" ng-change="vm.pageChanged()"></ul>
 	
                 </div>
